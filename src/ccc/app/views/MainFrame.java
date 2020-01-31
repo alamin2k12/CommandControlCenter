@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JRadioButton;
 import java.awt.Color;
+import java.awt.FlowLayout;
 
 public class MainFrame extends JFrame {
 
@@ -40,20 +41,19 @@ public class MainFrame extends JFrame {
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 865, 87);
-		contentPane.add(panel);
+		panel.setBackground(new Color(64, 224, 208));
+		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
+		flowLayout.setHgap(0);
+		flowLayout.setVgap(50);
+		contentPane.add(panel, BorderLayout.NORTH);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(135, 206, 235));
-		panel_1.setBounds(10, 87, 280, 527);
-		contentPane.add(panel_1);
-		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(new Color(255, 255, 255));
-		panel_2.setBounds(290, 87, 575, 527);
-		contentPane.add(panel_2);
+		panel_1.setBackground(new Color(147, 112, 219));
+		FlowLayout flowLayout_1 = (FlowLayout) panel_1.getLayout();
+		flowLayout_1.setHgap(150);
+		contentPane.add(panel_1, BorderLayout.WEST);
 	}
 }
