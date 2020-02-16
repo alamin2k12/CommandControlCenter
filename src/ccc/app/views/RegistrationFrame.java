@@ -43,6 +43,7 @@ public class RegistrationFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public RegistrationFrame() {
+		//this is registration frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 558, 387);
 		contentPane = new JPanel();
